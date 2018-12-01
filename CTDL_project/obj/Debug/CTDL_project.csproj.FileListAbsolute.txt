@@ -1,0 +1,14 @@
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\bin\Debug\CTDL_project.exe.config
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\bin\Debug\CTDL_project.exe
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\bin\Debug\CTDL_project.pdb
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\bin\Debug\MetroFramework.Design.dll
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\bin\Debug\MetroFramework.dll
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.csprojAssemblyReference.cache
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.Properties.Resources.resources
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.csproj.GenerateResource.cache
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.csproj.CoreCompileInputs.cache
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.csproj.CopyComplete
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.exe
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.pdb
+C:\Users\altf4\Desktop\CTDL_project\CTDL_project\obj\Debug\CTDL_project.Main.resources
