@@ -1,6 +1,7 @@
 ﻿using MetroFramework.Forms;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace CTDL_project
@@ -15,11 +16,12 @@ namespace CTDL_project
         #region Khai báo
         LinkListQueue myQueue = new LinkListQueue();
         TextBox[] Node;
+        //TextBox hihi;
         int item;
         int lenghtQueue;
         bool daTaoNode = false;
+        //int i = 0, x = 645;
         int j = 0;
-        //int x = 685;
         #endregion
 
         #region Queue
@@ -63,14 +65,25 @@ namespace CTDL_project
                 }
             }
         }
+
+        public static int[] StringToIntArray(string input)
+        {
+            string[] fields = input.Split(new char[] { ' ', '\n', ';', ',' }, StringSplitOptions.RemoveEmptyEntries);
+            int[] x = new int[fields.Length];
+            x = new int[fields.Length];
+
+            for (int i = 0; i < fields.Length; i++)
+            {
+                int.TryParse(fields[i], out x[i]);
+            }
+            return x;
+        }
         #endregion
 
         private void exit_Click(object sender, EventArgs e)
         {
-            DialogResult tl =
-                     MetroFramework.MetroMessageBox.Show(this, "Thoát khỏi chương trình ?",
-                     "Cảnh báo",
-                     MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+            DialogResult tl = MetroFramework.MetroMessageBox.Show(this, "Thoát khỏi chương trình ?", "Cảnh báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
             if (tl == DialogResult.Yes)
                 Application.Exit();
         }
@@ -100,9 +113,43 @@ namespace CTDL_project
                 return;
             }
             myQueue.Enqueue(item);
+
+            //Node = new TextBox[10];
+
+            //Node[i] = new TextBox();
+            //Node[i].Multiline = true;
+            //Node[i].Text = item.ToString();
+            //Node[i].TextAlign = HorizontalAlignment.Center;
+            //Node[i].Width = 40;
+            //Node[i].Height = 40;
+            //Node[i].Location = new Point(x, 185);
+            //Node[i].BackColor = Color.Coral;
+            //Node[i].ForeColor = Color.White;
+            //Node[i].Font = new Font(this.Font, FontStyle.Bold);
+            //Node[i].Font = new Font("Arial", 20, FontStyle.Bold);
+            //Node[i].ReadOnly = true;
+            //this.Controls.Add(Node[i]);
+            //x -= 60;
+            //i += 1;
+
+
+            //hihi = new TextBox();
+            //hihi.Text = item.ToString();
+            //hihi.TextAlign = HorizontalAlignment.Center;
+            //hihi.Width = 40;
+            //hihi.Height = 40;
+            //hihi.Location = new Point(x, 185);
+            //hihi.BackColor = Color.Coral;
+            //hihi.ForeColor = Color.White;
+            //hihi.Font = new Font(this.Font, FontStyle.Bold);
+            //hihi.Font = new Font("Arial", 20, FontStyle.Bold);
+            //hihi.ReadOnly = true;
+            //this.Controls.Add(hihi);
+
+            //i += 1;
+            //x -= 60;
+
             tao_Node();
-            //MetroFramework.MetroMessageBox.Show(this, "Đã thêm thành công!", "Thông báo",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.txt_giaTri.Clear();
             this.txt_giaTri.Focus();
         }
@@ -119,16 +166,23 @@ namespace CTDL_project
         {
             if (myQueue.front == null)
             {
+                pa_nhapTay.Enabled = false;
                 MetroFramework.MetroMessageBox.Show(this, "Queue is empty!", "Thông báo",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            tao_Node();
+            if (myQueue.front != null)
+            {
+                tao_Node();
+                pa_nhapTay.Enabled = true;
+            }
+
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
             pa_nhapTay.Enabled = false;
             pa_openFile.Enabled = false;
+            cb_code.SelectedIndex = 0;
         }
 
         private void cb_tuyChon_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,8 +210,89 @@ namespace CTDL_project
             if (temp != null)
             {
                 myQueue.Dequeue();
+                tao_Node();
             }
-            tao_Node();
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            if (myQueue.front == null)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Queue is empty ?", "Cảnh báo",
+                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (myQueue.front != null)
+            {
+                DialogResult tl = MetroFramework.MetroMessageBox.Show(this, "Delete Queue ?", "Cảnh báo",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (tl == DialogResult.Yes)
+                {
+                    myQueue.ClearQueue();
+                    tao_Node();
+                }
+            }
+        }
+
+        private void cb_code_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_code.SelectedIndex == 0)
+            {
+                txt_code.Items.Clear();
+                txt_code.Items.Add("internal void Enqueue(int item)");
+                txt_code.Items.Add(" {");
+                txt_code.Items.Add("     Node newNode = new Node(item);");
+                txt_code.Items.Add("     if (this.rear == null)");
+                txt_code.Items.Add("     {");
+                txt_code.Items.Add("         this.front = this.rear = newNode");
+                txt_code.Items.Add("     }");
+                txt_code.Items.Add("     else ");
+                txt_code.Items.Add("     {");
+                txt_code.Items.Add("         this.rear.next = newNode;");
+                txt_code.Items.Add("         this.rear = newNode;");
+                txt_code.Items.Add("     }");
+                txt_code.Items.Add(" }");
+            }
+            if (cb_code.SelectedIndex == 1)
+            {
+                txt_code.Items.Clear();
+                txt_code.Items.Add("internal void Dequeue() ");
+                txt_code.Items.Add(" {");
+                txt_code.Items.Add("     if (this.front == null)");
+                txt_code.Items.Add("     {");
+                txt_code.Items.Add("         return;");
+                txt_code.Items.Add("     }");
+                txt_code.Items.Add("     Node temp = this.front;");
+                txt_code.Items.Add("     this.front = this.front.next;");
+                txt_code.Items.Add("     if (this.front == null)");
+                txt_code.Items.Add("     {");
+                txt_code.Items.Add("         this.rear = null;");
+                txt_code.Items.Add("     }");
+                txt_code.Items.Add(" }");
+            }
+        }
+
+        private void btn_openFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                myQueue.ClearQueue();
+                // mở file
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    txt_openFile.Text = openFileDialog1.FileName;
+                    int[] input = StringToIntArray(File.ReadAllText(txt_openFile.Text).Trim());
+                    for (int i = 0; i < input.Length; i++)
+                    {
+                        myQueue.Enqueue(input[i]);
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Không Thể Thực Hiện Thao Tác", "Lỗi",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -46,6 +46,7 @@
             this.btn_deQueue = new MetroFramework.Controls.MetroLink();
             this.btn_showQueue = new MetroFramework.Controls.MetroLink();
             this.exit = new MetroFramework.Controls.MetroLink();
+            this.cb_code = new MetroFramework.Controls.MetroComboBox();
             this.groupBox1.SuspendLayout();
             this.pa_nhapTay.SuspendLayout();
             this.pa_openFile.SuspendLayout();
@@ -149,6 +150,7 @@
             this.btn_openFile.Size = new System.Drawing.Size(44, 36);
             this.btn_openFile.TabIndex = 3;
             this.btn_openFile.UseSelectable = true;
+            this.btn_openFile.Click += new System.EventHandler(this.btn_openFile_Click);
             // 
             // txt_openFile
             // 
@@ -223,6 +225,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cb_code);
             this.groupBox2.Controls.Add(this.txt_code);
             this.groupBox2.Location = new System.Drawing.Point(509, 359);
             this.groupBox2.Name = "groupBox2";
@@ -234,9 +237,9 @@
             // txt_code
             // 
             this.txt_code.FormattingEnabled = true;
-            this.txt_code.Location = new System.Drawing.Point(6, 15);
+            this.txt_code.Location = new System.Drawing.Point(6, 54);
             this.txt_code.Name = "txt_code";
-            this.txt_code.Size = new System.Drawing.Size(292, 147);
+            this.txt_code.Size = new System.Drawing.Size(292, 108);
             this.txt_code.TabIndex = 2;
             // 
             // groupBox3
@@ -272,6 +275,7 @@
             this.btn_clear.Size = new System.Drawing.Size(56, 58);
             this.btn_clear.TabIndex = 2;
             this.btn_clear.UseSelectable = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_deQueue
             // 
@@ -306,6 +310,21 @@
             this.exit.UseSelectable = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // cb_code
+            // 
+            this.cb_code.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.cb_code.FormattingEnabled = true;
+            this.cb_code.ItemHeight = 19;
+            this.cb_code.Items.AddRange(new object[] {
+            "EnQueue",
+            "DeQueue"});
+            this.cb_code.Location = new System.Drawing.Point(6, 19);
+            this.cb_code.Name = "cb_code";
+            this.cb_code.Size = new System.Drawing.Size(292, 25);
+            this.cb_code.TabIndex = 3;
+            this.cb_code.UseSelectable = true;
+            this.cb_code.SelectedIndexChanged += new System.EventHandler(this.cb_code_SelectedIndexChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,7 +338,7 @@
             this.Name = "Main";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Default;
-            this.Text = "Data Structure Queue";
+            this.Text = "Cấu trúc dữ liệu hàng đợi";
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.pa_nhapTay.ResumeLayout(false);
@@ -352,6 +371,7 @@
         private MetroFramework.Controls.MetroLink btn_clear;
         private MetroFramework.Controls.MetroLink btn_about;
         private MetroFramework.Controls.MetroLink btn_enQueue;
+        private MetroFramework.Controls.MetroComboBox cb_code;
     }
 }
 

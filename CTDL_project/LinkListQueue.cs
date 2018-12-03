@@ -54,7 +54,26 @@ namespace CTDL_project
 
             Console.WriteLine("Item deleted is {0}", temp.data);
         }
-        //Count lenght Queue
+
+        // Method to clear queue
+        internal void ClearQueue()
+        {
+            if (this.front == null)
+            {
+                Console.WriteLine("The Queue is empty");
+                return;
+            }
+
+            Node temp = this.front;
+
+            while (temp != null)
+            {
+                Dequeue();
+                temp = temp.next;
+            }
+        }
+
+        // Method to count lenght of Queue
         internal int lenghtQueue()
         {
             int i = 0;
