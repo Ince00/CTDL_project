@@ -83,6 +83,26 @@ namespace CTDL_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_next_arrow_3831001 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_next_arrow_3831001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_note_3830986 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_note_3830986", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_play_3830993 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_play_3830993", resourceCulture);

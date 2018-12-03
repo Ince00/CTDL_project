@@ -27,5 +27,20 @@ namespace CTDL_project
             if (tl == DialogResult.Yes)
                 Application.Exit();
         }
+
+        private void btn_about_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About frm = new About();
+            frm.ShowDialog();
+        }
+
+        private void cb_thaoTac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_thaoTac.SelectedIndex==0)
+            {
+                pa_tuyChon.Enabled = true;
+            }
+        }
     }
 }

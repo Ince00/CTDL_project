@@ -42,6 +42,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_code = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_about = new MetroFramework.Controls.MetroLink();
             this.btn_clear = new MetroFramework.Controls.MetroLink();
             this.btn_deQueue = new MetroFramework.Controls.MetroLink();
             this.btn_enQueue = new MetroFramework.Controls.MetroLink();
@@ -154,7 +155,7 @@
             this.txt_openFile.CustomButton.UseSelectable = true;
             this.txt_openFile.CustomButton.Visible = false;
             this.txt_openFile.Lines = new string[0];
-            this.txt_openFile.Location = new System.Drawing.Point(9, 3);
+            this.txt_openFile.Location = new System.Drawing.Point(9, 11);
             this.txt_openFile.MaxLength = 32767;
             this.txt_openFile.Name = "txt_openFile";
             this.txt_openFile.PasswordChar = '\0';
@@ -223,6 +224,7 @@
             this.cb_thaoTac.Size = new System.Drawing.Size(212, 25);
             this.cb_thaoTac.TabIndex = 1;
             this.cb_thaoTac.UseSelectable = true;
+            this.cb_thaoTac.SelectedIndexChanged += new System.EventHandler(this.cb_thaoTac_SelectedIndexChanged);
             // 
             // metroLabel1
             // 
@@ -253,6 +255,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_about);
             this.groupBox3.Controls.Add(this.btn_clear);
             this.groupBox3.Controls.Add(this.btn_deQueue);
             this.groupBox3.Controls.Add(this.btn_enQueue);
@@ -262,6 +265,17 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bảng điều khiển";
+            // 
+            // btn_about
+            // 
+            this.btn_about.Image = global::CTDL_project.Properties.Resources.iconfinder_note_3830986;
+            this.btn_about.ImageSize = 40;
+            this.btn_about.Location = new System.Drawing.Point(93, 96);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Size = new System.Drawing.Size(56, 58);
+            this.btn_about.TabIndex = 3;
+            this.btn_about.UseSelectable = true;
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
             // btn_clear
             // 
@@ -317,7 +331,7 @@
             this.Name = "Main";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Green;
-            this.Text = "Queue";
+            this.Text = "Data Structure Queue";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ba_nhapTay.ResumeLayout(false);
@@ -350,6 +364,7 @@
         private MetroFramework.Controls.MetroLink btn_enQueue;
         private MetroFramework.Controls.MetroLink btn_deQueue;
         private MetroFramework.Controls.MetroLink btn_clear;
+        private MetroFramework.Controls.MetroLink btn_about;
     }
 }
 
