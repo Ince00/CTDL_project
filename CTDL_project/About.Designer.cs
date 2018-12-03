@@ -51,7 +51,7 @@
             this.Controls.Add(this.exit);
             this.Name = "About";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "Thông tin nhóm ";
             this.ResumeLayout(false);
 

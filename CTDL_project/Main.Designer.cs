@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ba_nhapTay = new MetroFramework.Controls.MetroPanel();
+            this.pa_nhapTay = new MetroFramework.Controls.MetroPanel();
+            this.btn_enQueue = new MetroFramework.Controls.MetroLink();
             this.txt_giaTri = new MetroFramework.Controls.MetroTextBox();
             this.pa_openFile = new MetroFramework.Controls.MetroPanel();
             this.btn_openFile = new MetroFramework.Controls.MetroLink();
@@ -43,11 +44,10 @@
             this.btn_about = new MetroFramework.Controls.MetroLink();
             this.btn_clear = new MetroFramework.Controls.MetroLink();
             this.btn_deQueue = new MetroFramework.Controls.MetroLink();
-            this.btn_show = new MetroFramework.Controls.MetroLink();
+            this.btn_showQueue = new MetroFramework.Controls.MetroLink();
             this.exit = new MetroFramework.Controls.MetroLink();
-            this.btn_enQueue = new MetroFramework.Controls.MetroLink();
             this.groupBox1.SuspendLayout();
-            this.ba_nhapTay.SuspendLayout();
+            this.pa_nhapTay.SuspendLayout();
             this.pa_openFile.SuspendLayout();
             this.pa_tuyChon.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -56,7 +56,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ba_nhapTay);
+            this.groupBox1.Controls.Add(this.pa_nhapTay);
             this.groupBox1.Controls.Add(this.pa_openFile);
             this.groupBox1.Controls.Add(this.pa_tuyChon);
             this.groupBox1.Location = new System.Drawing.Point(23, 359);
@@ -66,20 +66,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tuỳ chọn";
             // 
-            // ba_nhapTay
+            // pa_nhapTay
             // 
-            this.ba_nhapTay.Controls.Add(this.btn_enQueue);
-            this.ba_nhapTay.Controls.Add(this.txt_giaTri);
-            this.ba_nhapTay.HorizontalScrollbarBarColor = true;
-            this.ba_nhapTay.HorizontalScrollbarHighlightOnWheel = false;
-            this.ba_nhapTay.HorizontalScrollbarSize = 10;
-            this.ba_nhapTay.Location = new System.Drawing.Point(6, 63);
-            this.ba_nhapTay.Name = "ba_nhapTay";
-            this.ba_nhapTay.Size = new System.Drawing.Size(298, 49);
-            this.ba_nhapTay.TabIndex = 3;
-            this.ba_nhapTay.VerticalScrollbarBarColor = true;
-            this.ba_nhapTay.VerticalScrollbarHighlightOnWheel = false;
-            this.ba_nhapTay.VerticalScrollbarSize = 10;
+            this.pa_nhapTay.Controls.Add(this.btn_enQueue);
+            this.pa_nhapTay.Controls.Add(this.txt_giaTri);
+            this.pa_nhapTay.HorizontalScrollbarBarColor = true;
+            this.pa_nhapTay.HorizontalScrollbarHighlightOnWheel = false;
+            this.pa_nhapTay.HorizontalScrollbarSize = 10;
+            this.pa_nhapTay.Location = new System.Drawing.Point(6, 63);
+            this.pa_nhapTay.Name = "pa_nhapTay";
+            this.pa_nhapTay.Size = new System.Drawing.Size(298, 49);
+            this.pa_nhapTay.TabIndex = 3;
+            this.pa_nhapTay.VerticalScrollbarBarColor = true;
+            this.pa_nhapTay.VerticalScrollbarHighlightOnWheel = false;
+            this.pa_nhapTay.VerticalScrollbarSize = 10;
+            // 
+            // btn_enQueue
+            // 
+            this.btn_enQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_settings_3830984;
+            this.btn_enQueue.ImageSize = 35;
+            this.btn_enQueue.Location = new System.Drawing.Point(242, 5);
+            this.btn_enQueue.Name = "btn_enQueue";
+            this.btn_enQueue.Size = new System.Drawing.Size(47, 41);
+            this.btn_enQueue.TabIndex = 3;
+            this.btn_enQueue.UseSelectable = true;
+            this.btn_enQueue.Click += new System.EventHandler(this.btn_enQueue_Click);
             // 
             // txt_giaTri
             // 
@@ -87,7 +98,7 @@
             // 
             // 
             this.txt_giaTri.CustomButton.Image = null;
-            this.txt_giaTri.CustomButton.Location = new System.Drawing.Point(51, 1);
+            this.txt_giaTri.CustomButton.Location = new System.Drawing.Point(138, 1);
             this.txt_giaTri.CustomButton.Name = "";
             this.txt_giaTri.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_giaTri.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -112,6 +123,7 @@
             this.txt_giaTri.WaterMark = "Nhập giá trị . . .";
             this.txt_giaTri.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_giaTri.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_giaTri.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_giaTri_KeyDown);
             // 
             // pa_openFile
             // 
@@ -144,7 +156,7 @@
             // 
             // 
             this.txt_openFile.CustomButton.Image = null;
-            this.txt_openFile.CustomButton.Location = new System.Drawing.Point(206, 1);
+            this.txt_openFile.CustomButton.Location = new System.Drawing.Point(138, 1);
             this.txt_openFile.CustomButton.Name = "";
             this.txt_openFile.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_openFile.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -191,13 +203,14 @@
             this.cb_tuyChon.FormattingEnabled = true;
             this.cb_tuyChon.ItemHeight = 19;
             this.cb_tuyChon.Items.AddRange(new object[] {
-            "Thêm tay",
-            "Đọc File"});
+            "Nhập từng giá trị",
+            "Đọc giá trị từ File"});
             this.cb_tuyChon.Location = new System.Drawing.Point(77, 3);
             this.cb_tuyChon.Name = "cb_tuyChon";
             this.cb_tuyChon.Size = new System.Drawing.Size(212, 25);
             this.cb_tuyChon.TabIndex = 3;
             this.cb_tuyChon.UseSelectable = true;
+            this.cb_tuyChon.SelectedIndexChanged += new System.EventHandler(this.cb_tuyChon_SelectedIndexChanged);
             // 
             // metroLabel2
             // 
@@ -231,7 +244,7 @@
             this.groupBox3.Controls.Add(this.btn_about);
             this.groupBox3.Controls.Add(this.btn_clear);
             this.groupBox3.Controls.Add(this.btn_deQueue);
-            this.groupBox3.Controls.Add(this.btn_show);
+            this.groupBox3.Controls.Add(this.btn_showQueue);
             this.groupBox3.Location = new System.Drawing.Point(339, 359);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(164, 172);
@@ -269,16 +282,18 @@
             this.btn_deQueue.Size = new System.Drawing.Size(56, 58);
             this.btn_deQueue.TabIndex = 1;
             this.btn_deQueue.UseSelectable = true;
+            this.btn_deQueue.Click += new System.EventHandler(this.btn_deQueue_Click);
             // 
-            // btn_show
+            // btn_showQueue
             // 
-            this.btn_show.Image = global::CTDL_project.Properties.Resources.iconfinder_play_3830993;
-            this.btn_show.ImageSize = 40;
-            this.btn_show.Location = new System.Drawing.Point(20, 25);
-            this.btn_show.Name = "btn_show";
-            this.btn_show.Size = new System.Drawing.Size(56, 58);
-            this.btn_show.TabIndex = 0;
-            this.btn_show.UseSelectable = true;
+            this.btn_showQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_play_3830993;
+            this.btn_showQueue.ImageSize = 40;
+            this.btn_showQueue.Location = new System.Drawing.Point(20, 25);
+            this.btn_showQueue.Name = "btn_showQueue";
+            this.btn_showQueue.Size = new System.Drawing.Size(56, 58);
+            this.btn_showQueue.TabIndex = 0;
+            this.btn_showQueue.UseSelectable = true;
+            this.btn_showQueue.Click += new System.EventHandler(this.btn_showQueue_Click);
             // 
             // exit
             // 
@@ -290,17 +305,6 @@
             this.exit.TabIndex = 7;
             this.exit.UseSelectable = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // btn_enQueue
-            // 
-            this.btn_enQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_settings_3830984;
-            this.btn_enQueue.ImageSize = 35;
-            this.btn_enQueue.Location = new System.Drawing.Point(242, 5);
-            this.btn_enQueue.Name = "btn_enQueue";
-            this.btn_enQueue.Size = new System.Drawing.Size(47, 41);
-            this.btn_enQueue.TabIndex = 3;
-            this.btn_enQueue.UseSelectable = true;
-            this.btn_enQueue.Click += new System.EventHandler(this.btn_enQueue_Click);
             // 
             // Main
             // 
@@ -316,8 +320,9 @@
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "Data Structure Queue";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
-            this.ba_nhapTay.ResumeLayout(false);
+            this.pa_nhapTay.ResumeLayout(false);
             this.pa_openFile.ResumeLayout(false);
             this.pa_tuyChon.ResumeLayout(false);
             this.pa_tuyChon.PerformLayout();
@@ -340,9 +345,9 @@
         private MetroFramework.Controls.MetroLink btn_openFile;
         private MetroFramework.Controls.MetroTextBox txt_openFile;
         private System.Windows.Forms.ListBox txt_code;
-        private MetroFramework.Controls.MetroPanel ba_nhapTay;
+        private MetroFramework.Controls.MetroPanel pa_nhapTay;
         private MetroFramework.Controls.MetroTextBox txt_giaTri;
-        private MetroFramework.Controls.MetroLink btn_show;
+        private MetroFramework.Controls.MetroLink btn_showQueue;
         private MetroFramework.Controls.MetroLink btn_deQueue;
         private MetroFramework.Controls.MetroLink btn_clear;
         private MetroFramework.Controls.MetroLink btn_about;

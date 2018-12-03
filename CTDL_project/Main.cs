@@ -17,50 +17,51 @@ namespace CTDL_project
         TextBox[] Node;
         int item;
         int lenghtQueue;
-        int i = 0;
-        int Khoang_cach;//khoảng cách 2 node liên tiếp
-        int Canh_le;//canh lề node
-        int Kich_thuoc; // kích thước node
-        int Co_chu; //kích thước chữ
-        bool Da_tao_mang = false;
+        bool daTaoNode = false;
+        int j = 0;
+        //int x = 685;
         #endregion
 
         #region Queue
-        public void tao_Mang()
+        public void tao_Node()
         {
-            myQueue.Enqueue(item);
+            xoa_Node();
+            int x = 645;
             lenghtQueue = myQueue.lenghtQueue();
-
-
             Node = new TextBox[lenghtQueue];
-            Kich_thuoc = 50;
-            Co_chu = 25;
-            Khoang_cach = 40;
-            Canh_le = (1024 - Kich_thuoc * lenghtQueue - Khoang_cach * (lenghtQueue - 1)) / 2;
-
-
-
             Node temp = myQueue.front;
 
-            while (temp != null)
+            for (int i = 0; i < lenghtQueue; i++)
             {
                 Node[i] = new TextBox();
                 Node[i].Multiline = true;
                 Node[i].Text = temp.data.ToString();
                 Node[i].TextAlign = HorizontalAlignment.Center;
-                Node[i].Width = Kich_thuoc;
-                Node[i].Height = Kich_thuoc;
-                Node[i].Location = new Point(Canh_le + (Kich_thuoc + Khoang_cach) * i, 130);
-                Node[i].BackColor = Color.OrangeRed;
+                Node[i].Width = 40;
+                Node[i].Height = 40;
+                Node[i].Location = new Point(x, 185);
+                Node[i].BackColor = Color.Coral;
                 Node[i].ForeColor = Color.White;
                 Node[i].Font = new Font(this.Font, FontStyle.Bold);
-                Node[i].Font = new Font("Arial", Co_chu, FontStyle.Bold);
+                Node[i].Font = new Font("Arial", 20, FontStyle.Bold);
                 Node[i].ReadOnly = true;
                 this.Controls.Add(Node[i]);
-                i += 1;
+                x -= 60;
                 temp = temp.next;
             }
-            Da_tao_mang = true; //Xác nhận đã tạo mảng
+            j = lenghtQueue;
+            daTaoNode = true;
+        }
+
+        public void xoa_Node()
+        {
+            if (daTaoNode == true)
+            {
+                for (int i = 0; i < j; i++)
+                {
+                    this.Controls.Remove(Node[i]);
+                }
+            }
         }
         #endregion
 
@@ -69,7 +70,7 @@ namespace CTDL_project
             DialogResult tl =
                      MetroFramework.MetroMessageBox.Show(this, "Thoát khỏi chương trình ?",
                      "Cảnh báo",
-                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                     MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
             if (tl == DialogResult.Yes)
                 Application.Exit();
         }
@@ -88,17 +89,75 @@ namespace CTDL_project
             try
             {
                 item = Convert.ToInt32(txt_giaTri.Text);
+
             }
             catch
             {
-                MetroFramework.MetroMessageBox.Show(this, "Số phần tử vừa nhập vào không hợp lệ!", "Thông báo");
+                MetroFramework.MetroMessageBox.Show(this, "Vui lòng nhập giá trị cần thêm vào Queue!", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.txt_giaTri.Clear();
                 this.txt_giaTri.Focus();
                 return;
             }
             myQueue.Enqueue(item);
-            MetroFramework.MetroMessageBox.Show(this, "Đã thêm thành công!", "Thông báo",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            tao_Node();
+            //MetroFramework.MetroMessageBox.Show(this, "Đã thêm thành công!", "Thông báo",
+            //    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.txt_giaTri.Clear();
+            this.txt_giaTri.Focus();
+        }
+
+        private void txt_giaTri_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_enQueue.PerformClick();
+            }
+        }
+
+        private void btn_showQueue_Click(object sender, EventArgs e)
+        {
+            if (myQueue.front == null)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Queue is empty!", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            tao_Node();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            pa_nhapTay.Enabled = false;
+            pa_openFile.Enabled = false;
+        }
+
+        private void cb_tuyChon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_tuyChon.SelectedIndex == 0)
+            {
+                pa_nhapTay.Enabled = true;
+                pa_openFile.Enabled = false;
+            }
+            if (cb_tuyChon.SelectedIndex == 1)
+            {
+                pa_nhapTay.Enabled = false;
+                pa_openFile.Enabled = true;
+            }
+        }
+
+        private void btn_deQueue_Click(object sender, EventArgs e)
+        {
+            Node temp = myQueue.front;
+            if (temp == null)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Queue is empty!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (temp != null)
+            {
+                myQueue.Dequeue();
+            }
+            tao_Node();
         }
     }
 }
