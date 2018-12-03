@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CTDL_project
 {
     //this class will depict Linked List implementation of Queue
     internal class LinkListQueue
     {
-        Node front;
-        Node rear;
+        public Node front;
+        public Node rear;
 
         public LinkListQueue()
         {
@@ -57,6 +53,18 @@ namespace CTDL_project
             }
 
             Console.WriteLine("Item deleted is {0}", temp.data);
+        }
+        //Count lenght Queue
+        internal int lenghtQueue()
+        {
+            int i = 0;
+            Node temp = this.front;
+            while (temp != null)
+            {
+                i += 1;
+                temp = temp.next;
+            }
+            return i;
         }
 
         // Method to print Queue elements
