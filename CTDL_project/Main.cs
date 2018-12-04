@@ -28,7 +28,7 @@ namespace CTDL_project
         public void tao_Node()
         {
             xoa_Node();
-            int x = 645;
+            int x = 675;
             lenghtQueue = myQueue.lenghtQueue();
             Node = new TextBox[lenghtQueue];
             Node temp = myQueue.front;
@@ -182,7 +182,6 @@ namespace CTDL_project
         {
             pa_nhapTay.Enabled = false;
             pa_openFile.Enabled = false;
-            cb_code.SelectedIndex = 0;
         }
 
         private void cb_tuyChon_SelectedIndexChanged(object sender, EventArgs e)
