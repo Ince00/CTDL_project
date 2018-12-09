@@ -15,43 +15,69 @@ namespace CTDL_project
         }
         #region Khai báo
         LinkListQueue myQueue = new LinkListQueue();
-        TextBox[] Node;
-        //TextBox hihi;
-        int item;
+        int x = 40;
         int lenghtQueue;
+        TextBox[] Node;
+        int item;
         bool daTaoNode = false;
-        //int i = 0, x = 645;
+        int i = 0;
         int j = 0;
         #endregion
 
         #region Queue
+        //public void tao_Node()
+        //{
+        //    xoa_Node();
+        //    int x = 40;
+        //    lenghtQueue = myQueue.lenghtQueue();
+        //    Node = new TextBox[100];
+        //    Node temp = myQueue.front;
+
+        //    for (i = 0; i < lenghtQueue; i++)
+        //    {
+        //        Node[i] = new TextBox();
+        //        Node[i].Multiline = true;
+        //        Node[i].Text = temp.data.ToString();
+        //        Node[i].TextAlign = HorizontalAlignment.Center;
+        //        Node[i].Width = 40;
+        //        Node[i].Height = 40;
+        //        Node[i].Location = new Point(x, 75);
+        //        Node[i].BackColor = Color.Coral;
+        //        Node[i].ForeColor = Color.White;
+        //        Node[i].Font = new Font(this.Font, FontStyle.Bold);
+        //        Node[i].Font = new Font("Arial", 20, FontStyle.Bold);
+        //        Node[i].ReadOnly = true;
+        //        this.Controls.Add(Node[i]);
+        //        x += 60;
+        //        temp = temp.next;
+        //    }
+        //    j = lenghtQueue;
+        //    daTaoNode = true;
+        //}
         public void tao_Node()
         {
-            xoa_Node();
-            int x = 675;
-            lenghtQueue = myQueue.lenghtQueue();
-            Node = new TextBox[lenghtQueue];
+            Node = new TextBox[100];
             Node temp = myQueue.front;
 
-            for (int i = 0; i < lenghtQueue; i++)
-            {
-                Node[i] = new TextBox();
-                Node[i].Multiline = true;
-                Node[i].Text = temp.data.ToString();
-                Node[i].TextAlign = HorizontalAlignment.Center;
-                Node[i].Width = 40;
-                Node[i].Height = 40;
-                Node[i].Location = new Point(x, 185);
-                Node[i].BackColor = Color.Coral;
-                Node[i].ForeColor = Color.White;
-                Node[i].Font = new Font(this.Font, FontStyle.Bold);
-                Node[i].Font = new Font("Arial", 20, FontStyle.Bold);
-                Node[i].ReadOnly = true;
-                this.Controls.Add(Node[i]);
-                x -= 60;
-                temp = temp.next;
-            }
-            j = lenghtQueue;
+
+            Node[i] = new TextBox();
+            Node[i].Multiline = true;
+            Node[i].Text = temp.data.ToString();
+            Node[i].TextAlign = HorizontalAlignment.Center;
+            Node[i].Width = 40;
+            Node[i].Height = 40;
+            Node[i].Location = new Point(x, 75);
+            Node[i].BackColor = Color.Coral;
+            Node[i].ForeColor = Color.White;
+            Node[i].Font = new Font(this.Font, FontStyle.Bold);
+            Node[i].Font = new Font("Arial", 20, FontStyle.Bold);
+            Node[i].ReadOnly = true;
+            this.Controls.Add(Node[i]);
+            i++;
+            x += 60;
+            temp = temp.next;
+
+
             daTaoNode = true;
         }
 
@@ -59,7 +85,7 @@ namespace CTDL_project
         {
             if (daTaoNode == true)
             {
-                for (int i = 0; i < j; i++)
+                for (i = 0; i < j; i++)
                 {
                     this.Controls.Remove(Node[i]);
                 }
@@ -90,7 +116,7 @@ namespace CTDL_project
 
         private void btn_about_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             About frm = new About();
             frm.ShowDialog();
         }
@@ -102,7 +128,10 @@ namespace CTDL_project
             try
             {
                 item = Convert.ToInt32(txt_giaTri.Text);
-
+                myQueue.Enqueue(item);
+                tao_Node();
+                this.txt_giaTri.Clear();
+                this.txt_giaTri.Focus();
             }
             catch
             {
@@ -112,46 +141,6 @@ namespace CTDL_project
                 this.txt_giaTri.Focus();
                 return;
             }
-            myQueue.Enqueue(item);
-
-            //Node = new TextBox[10];
-
-            //Node[i] = new TextBox();
-            //Node[i].Multiline = true;
-            //Node[i].Text = item.ToString();
-            //Node[i].TextAlign = HorizontalAlignment.Center;
-            //Node[i].Width = 40;
-            //Node[i].Height = 40;
-            //Node[i].Location = new Point(x, 185);
-            //Node[i].BackColor = Color.Coral;
-            //Node[i].ForeColor = Color.White;
-            //Node[i].Font = new Font(this.Font, FontStyle.Bold);
-            //Node[i].Font = new Font("Arial", 20, FontStyle.Bold);
-            //Node[i].ReadOnly = true;
-            //this.Controls.Add(Node[i]);
-            //x -= 60;
-            //i += 1;
-
-
-            //hihi = new TextBox();
-            //hihi.Text = item.ToString();
-            //hihi.TextAlign = HorizontalAlignment.Center;
-            //hihi.Width = 40;
-            //hihi.Height = 40;
-            //hihi.Location = new Point(x, 185);
-            //hihi.BackColor = Color.Coral;
-            //hihi.ForeColor = Color.White;
-            //hihi.Font = new Font(this.Font, FontStyle.Bold);
-            //hihi.Font = new Font("Arial", 20, FontStyle.Bold);
-            //hihi.ReadOnly = true;
-            //this.Controls.Add(hihi);
-
-            //i += 1;
-            //x -= 60;
-
-            tao_Node();
-            this.txt_giaTri.Clear();
-            this.txt_giaTri.Focus();
         }
 
         private void txt_giaTri_KeyDown(object sender, KeyEventArgs e)
@@ -166,16 +155,71 @@ namespace CTDL_project
         {
             if (myQueue.front == null)
             {
-                pa_nhapTay.Enabled = false;
                 MetroFramework.MetroMessageBox.Show(this, "Queue is empty!", "Thông báo",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (myQueue.front != null)
             {
-                tao_Node();
-                pa_nhapTay.Enabled = true;
+                int quaTrai = 0;
+                int quaPhai = 605;
+                for (int j = 0; j < myQueue.lenghtQueue(); j++)
+                {
+                    Node_qua_trai(Node[j], quaTrai);
+                    Node_di_xuong(Node[j], 90);
+                    Node_qua_phai(Node[j], quaPhai);
+                    quaTrai += 60;
+                    quaPhai -= 60;
+                }
             }
+        }
 
+        public void Node_di_xuong(Control t, int S)
+        {
+            Application.DoEvents();
+            this.Invoke((MethodInvoker)delegate
+            {
+                int loop_Count = S;
+                while (loop_Count > 0)
+                {
+                    Application.DoEvents();
+                    t.Top += 1;
+                    //Tre(Toc_do);
+                    loop_Count--;
+                }
+                t.Refresh();
+            });
+        }
+        public void Node_qua_phai(Control t, int S)
+        {
+            Application.DoEvents();
+            this.Invoke((MethodInvoker)delegate
+            {
+                int loop_Count = S;
+                while (loop_Count > 0)
+                {
+                    Application.DoEvents();
+                    t.Left += 1;
+                    //Tre(Toc_do);
+                    loop_Count--;
+                }
+                t.Refresh();
+            });
+        }
+        public void Node_qua_trai(Control t, int S)
+        {
+            Application.DoEvents();
+            this.Invoke((MethodInvoker)delegate
+            {
+                int loop_Count = S;
+                while (loop_Count > 0)
+                {
+                    Application.DoEvents();
+                    t.Left -= 1;
+                    //Tre(Toc_do);
+                    loop_Count--;
+                }
+                t.Refresh();
+            });
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -209,7 +253,7 @@ namespace CTDL_project
             if (temp != null)
             {
                 myQueue.Dequeue();
-                tao_Node();
+                // Node_qua_trai(Node)
             }
         }
 
@@ -227,7 +271,7 @@ namespace CTDL_project
                 if (tl == DialogResult.Yes)
                 {
                     myQueue.ClearQueue();
-                    tao_Node();
+                    xoa_Node();
                 }
             }
         }
@@ -274,7 +318,16 @@ namespace CTDL_project
         {
             try
             {
-                myQueue.ClearQueue();
+                if (myQueue.front != null)
+                {
+                    DialogResult tl = MetroFramework.MetroMessageBox.Show(this, "Delete Queue ?", "Cảnh báo",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (tl == DialogResult.Yes)
+                    {
+                        myQueue.ClearQueue();
+                        tao_Node();
+                    }
+                }
                 // mở file
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -285,13 +338,51 @@ namespace CTDL_project
                     {
                         myQueue.Enqueue(input[i]);
                     }
+                    tao_Node();
+                    MetroFramework.MetroMessageBox.Show(this, "Đọc file thành công !", "Thông báo",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 }
+
             }
             catch
             {
                 MessageBox.Show("Không Thể Thực Hiện Thao Tác", "Lỗi",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lenghtQueue; i++)
+            {
+                Node[i].Top += 3;
+                if (Node[i].Top == 165)
+                {
+                    timer1.Stop();
+                }
+                //while (Node[i].Top != 165)
+                //{
+                //    Node[i].Top += 3;
+                //    if (Node[i].Top == 165)
+                //    {
+                //        timer1.Stop();
+                //    }
+                //}
+                //Node[i].Left += 30;
+                //if (Node[i].Left == 645)
+                //{
+                //    timer1.Stop();
+                //}
+                //while(Node[i].Left<645)
+                //{
+                //    Node[i].Left += 30;
+                //    if (Node[i].Left == 645)
+                //    {
+                //        timer1.Stop();
+                //    }
+                //}
+            }
+            //Node[0].Left--;
         }
     }
 }

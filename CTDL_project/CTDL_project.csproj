@@ -125,5 +125,8 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_next_arrow_3831001.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_004_-_Pause_2949910.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

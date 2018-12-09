@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pa_nhapTay = new MetroFramework.Controls.MetroPanel();
             this.btn_enQueue = new MetroFramework.Controls.MetroLink();
@@ -45,6 +47,10 @@
             this.btn_clear = new MetroFramework.Controls.MetroLink();
             this.btn_deQueue = new MetroFramework.Controls.MetroLink();
             this.btn_showQueue = new MetroFramework.Controls.MetroLink();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.metroScrollBar1 = new MetroFramework.Controls.MetroScrollBar();
+            this.btn_tamDung = new MetroFramework.Controls.MetroLink();
             this.exit = new MetroFramework.Controls.MetroLink();
             this.groupBox1.SuspendLayout();
             this.pa_nhapTay.SuspendLayout();
@@ -52,6 +58,7 @@
             this.pa_tuyChon.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,7 +68,7 @@
             this.groupBox1.Controls.Add(this.pa_tuyChon);
             this.groupBox1.Location = new System.Drawing.Point(23, 359);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(238, 172);
+            this.groupBox1.Size = new System.Drawing.Size(248, 172);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tuỳ chọn";
@@ -75,7 +82,7 @@
             this.pa_nhapTay.HorizontalScrollbarSize = 10;
             this.pa_nhapTay.Location = new System.Drawing.Point(6, 63);
             this.pa_nhapTay.Name = "pa_nhapTay";
-            this.pa_nhapTay.Size = new System.Drawing.Size(226, 49);
+            this.pa_nhapTay.Size = new System.Drawing.Size(236, 49);
             this.pa_nhapTay.TabIndex = 3;
             this.pa_nhapTay.VerticalScrollbarBarColor = true;
             this.pa_nhapTay.VerticalScrollbarHighlightOnWheel = false;
@@ -83,9 +90,10 @@
             // 
             // btn_enQueue
             // 
+            this.btn_enQueue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_enQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_settings_3830984;
             this.btn_enQueue.ImageSize = 35;
-            this.btn_enQueue.Location = new System.Drawing.Point(176, 5);
+            this.btn_enQueue.Location = new System.Drawing.Point(186, 5);
             this.btn_enQueue.Name = "btn_enQueue";
             this.btn_enQueue.Size = new System.Drawing.Size(47, 41);
             this.btn_enQueue.TabIndex = 3;
@@ -98,7 +106,7 @@
             // 
             // 
             this.txt_giaTri.CustomButton.Image = null;
-            this.txt_giaTri.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txt_giaTri.CustomButton.Location = new System.Drawing.Point(153, 1);
             this.txt_giaTri.CustomButton.Name = "";
             this.txt_giaTri.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_giaTri.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -117,7 +125,7 @@
             this.txt_giaTri.SelectionLength = 0;
             this.txt_giaTri.SelectionStart = 0;
             this.txt_giaTri.ShortcutsEnabled = true;
-            this.txt_giaTri.Size = new System.Drawing.Size(162, 25);
+            this.txt_giaTri.Size = new System.Drawing.Size(177, 25);
             this.txt_giaTri.TabIndex = 2;
             this.txt_giaTri.UseSelectable = true;
             this.txt_giaTri.WaterMark = "Nhập giá trị . . .";
@@ -134,7 +142,7 @@
             this.pa_openFile.HorizontalScrollbarSize = 10;
             this.pa_openFile.Location = new System.Drawing.Point(6, 118);
             this.pa_openFile.Name = "pa_openFile";
-            this.pa_openFile.Size = new System.Drawing.Size(226, 44);
+            this.pa_openFile.Size = new System.Drawing.Size(236, 44);
             this.pa_openFile.TabIndex = 4;
             this.pa_openFile.VerticalScrollbarBarColor = true;
             this.pa_openFile.VerticalScrollbarHighlightOnWheel = false;
@@ -144,7 +152,7 @@
             // 
             this.btn_openFile.Image = global::CTDL_project.Properties.Resources.iconfinder_folders_3830989;
             this.btn_openFile.ImageSize = 35;
-            this.btn_openFile.Location = new System.Drawing.Point(179, 5);
+            this.btn_openFile.Location = new System.Drawing.Point(189, 5);
             this.btn_openFile.Name = "btn_openFile";
             this.btn_openFile.Size = new System.Drawing.Size(44, 36);
             this.btn_openFile.TabIndex = 3;
@@ -157,7 +165,7 @@
             // 
             // 
             this.txt_openFile.CustomButton.Image = null;
-            this.txt_openFile.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txt_openFile.CustomButton.Location = new System.Drawing.Point(153, 1);
             this.txt_openFile.CustomButton.Name = "";
             this.txt_openFile.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_openFile.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -176,7 +184,7 @@
             this.txt_openFile.SelectionLength = 0;
             this.txt_openFile.SelectionStart = 0;
             this.txt_openFile.ShortcutsEnabled = true;
-            this.txt_openFile.Size = new System.Drawing.Size(162, 25);
+            this.txt_openFile.Size = new System.Drawing.Size(177, 25);
             this.txt_openFile.TabIndex = 2;
             this.txt_openFile.UseSelectable = true;
             this.txt_openFile.WaterMark = "Nhập đường dẫn . . .";
@@ -191,7 +199,7 @@
             this.pa_tuyChon.HorizontalScrollbarSize = 10;
             this.pa_tuyChon.Location = new System.Drawing.Point(6, 19);
             this.pa_tuyChon.Name = "pa_tuyChon";
-            this.pa_tuyChon.Size = new System.Drawing.Size(226, 38);
+            this.pa_tuyChon.Size = new System.Drawing.Size(236, 38);
             this.pa_tuyChon.TabIndex = 2;
             this.pa_tuyChon.VerticalScrollbarBarColor = true;
             this.pa_tuyChon.VerticalScrollbarHighlightOnWheel = false;
@@ -199,6 +207,7 @@
             // 
             // cb_tuyChon
             // 
+            this.cb_tuyChon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_tuyChon.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.cb_tuyChon.FormattingEnabled = true;
             this.cb_tuyChon.ItemHeight = 19;
@@ -208,7 +217,7 @@
             this.cb_tuyChon.Location = new System.Drawing.Point(3, 6);
             this.cb_tuyChon.Name = "cb_tuyChon";
             this.cb_tuyChon.PromptText = "Phương thức nhập";
-            this.cb_tuyChon.Size = new System.Drawing.Size(220, 25);
+            this.cb_tuyChon.Size = new System.Drawing.Size(230, 25);
             this.cb_tuyChon.TabIndex = 3;
             this.cb_tuyChon.UseSelectable = true;
             this.cb_tuyChon.SelectedIndexChanged += new System.EventHandler(this.cb_tuyChon_SelectedIndexChanged);
@@ -217,15 +226,16 @@
             // 
             this.groupBox2.Controls.Add(this.cb_code);
             this.groupBox2.Controls.Add(this.txt_code);
-            this.groupBox2.Location = new System.Drawing.Point(509, 359);
+            this.groupBox2.Location = new System.Drawing.Point(595, 359);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(304, 172);
+            this.groupBox2.Size = new System.Drawing.Size(218, 172);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thể hiện code";
             // 
             // cb_code
             // 
+            this.cb_code.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_code.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.cb_code.FormattingEnabled = true;
             this.cb_code.ItemHeight = 19;
@@ -235,7 +245,7 @@
             this.cb_code.Location = new System.Drawing.Point(6, 19);
             this.cb_code.Name = "cb_code";
             this.cb_code.PromptText = "Lựa chọn thao tác";
-            this.cb_code.Size = new System.Drawing.Size(292, 25);
+            this.cb_code.Size = new System.Drawing.Size(206, 25);
             this.cb_code.TabIndex = 3;
             this.cb_code.UseSelectable = true;
             this.cb_code.SelectedIndexChanged += new System.EventHandler(this.cb_code_SelectedIndexChanged);
@@ -245,7 +255,7 @@
             this.txt_code.FormattingEnabled = true;
             this.txt_code.Location = new System.Drawing.Point(6, 54);
             this.txt_code.Name = "txt_code";
-            this.txt_code.Size = new System.Drawing.Size(292, 108);
+            this.txt_code.Size = new System.Drawing.Size(206, 108);
             this.txt_code.TabIndex = 2;
             // 
             // groupBox3
@@ -254,18 +264,19 @@
             this.groupBox3.Controls.Add(this.btn_clear);
             this.groupBox3.Controls.Add(this.btn_deQueue);
             this.groupBox3.Controls.Add(this.btn_showQueue);
-            this.groupBox3.Location = new System.Drawing.Point(267, 359);
+            this.groupBox3.Location = new System.Drawing.Point(277, 359);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(135, 172);
+            this.groupBox3.Size = new System.Drawing.Size(157, 172);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bảng điều khiển";
             // 
             // btn_about
             // 
+            this.btn_about.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_about.Image = global::CTDL_project.Properties.Resources.iconfinder_note_3830986;
             this.btn_about.ImageSize = 40;
-            this.btn_about.Location = new System.Drawing.Point(73, 89);
+            this.btn_about.Location = new System.Drawing.Point(75, 89);
             this.btn_about.Name = "btn_about";
             this.btn_about.Size = new System.Drawing.Size(56, 58);
             this.btn_about.TabIndex = 3;
@@ -274,6 +285,7 @@
             // 
             // btn_clear
             // 
+            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_clear.Image = global::CTDL_project.Properties.Resources.iconfinder_retweet_3830998;
             this.btn_clear.ImageSize = 40;
             this.btn_clear.Location = new System.Drawing.Point(6, 89);
@@ -285,9 +297,10 @@
             // 
             // btn_deQueue
             // 
+            this.btn_deQueue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_deQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_close_3830967;
             this.btn_deQueue.ImageSize = 40;
-            this.btn_deQueue.Location = new System.Drawing.Point(73, 25);
+            this.btn_deQueue.Location = new System.Drawing.Point(75, 25);
             this.btn_deQueue.Name = "btn_deQueue";
             this.btn_deQueue.Size = new System.Drawing.Size(56, 58);
             this.btn_deQueue.TabIndex = 1;
@@ -296,6 +309,7 @@
             // 
             // btn_showQueue
             // 
+            this.btn_showQueue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_showQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_play_3830993;
             this.btn_showQueue.ImageSize = 40;
             this.btn_showQueue.Location = new System.Drawing.Point(6, 25);
@@ -305,8 +319,49 @@
             this.btn_showQueue.UseSelectable = true;
             this.btn_showQueue.Click += new System.EventHandler(this.btn_showQueue_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.metroScrollBar1);
+            this.groupBox4.Controls.Add(this.btn_tamDung);
+            this.groupBox4.Location = new System.Drawing.Point(440, 359);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(149, 172);
+            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Bảng điều khiển";
+            // 
+            // metroScrollBar1
+            // 
+            this.metroScrollBar1.LargeChange = 10;
+            this.metroScrollBar1.Location = new System.Drawing.Point(116, 19);
+            this.metroScrollBar1.Maximum = 100;
+            this.metroScrollBar1.Minimum = 0;
+            this.metroScrollBar1.MouseWheelBarPartitions = 10;
+            this.metroScrollBar1.Name = "metroScrollBar1";
+            this.metroScrollBar1.Orientation = MetroFramework.Controls.MetroScrollOrientation.Vertical;
+            this.metroScrollBar1.ScrollbarSize = 10;
+            this.metroScrollBar1.Size = new System.Drawing.Size(10, 143);
+            this.metroScrollBar1.TabIndex = 1;
+            this.metroScrollBar1.UseSelectable = true;
+            // 
+            // btn_tamDung
+            // 
+            this.btn_tamDung.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_tamDung.Image = global::CTDL_project.Properties.Resources.iconfinder_004___Pause_2949910;
+            this.btn_tamDung.ImageSize = 40;
+            this.btn_tamDung.Location = new System.Drawing.Point(6, 25);
+            this.btn_tamDung.Name = "btn_tamDung";
+            this.btn_tamDung.Size = new System.Drawing.Size(56, 58);
+            this.btn_tamDung.TabIndex = 0;
+            this.btn_tamDung.UseSelectable = true;
+            // 
             // exit
             // 
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Image = global::CTDL_project.Properties.Resources.icons8_shutdown_64;
             this.exit.ImageSize = 36;
             this.exit.Location = new System.Drawing.Point(790, 15);
@@ -322,10 +377,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 554);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.exit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Default;
@@ -337,6 +394,7 @@
             this.pa_tuyChon.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -361,6 +419,10 @@
         private MetroFramework.Controls.MetroLink btn_about;
         private MetroFramework.Controls.MetroLink btn_enQueue;
         private MetroFramework.Controls.MetroComboBox cb_code;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private MetroFramework.Controls.MetroLink btn_tamDung;
+        private MetroFramework.Controls.MetroScrollBar metroScrollBar1;
     }
 }
 

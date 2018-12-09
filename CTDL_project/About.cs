@@ -20,10 +20,10 @@ namespace CTDL_project
 
         private void exit_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             this.Close();
-            Main frm = new Main();
-            frm.ShowDialog();
+            //Main frm = new Main();
+            //frm.ShowDialog();
         }
     }
 }

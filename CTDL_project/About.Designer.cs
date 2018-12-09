@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.exit = new MetroFramework.Controls.MetroLink();
             this.SuspendLayout();
             // 
             // exit
             // 
-            this.exit.Image = global::CTDL_project.Properties.Resources.iconfinder_next_arrow_3831001;
-            this.exit.ImageSize = 36;
-            this.exit.Location = new System.Drawing.Point(463, 12);
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit.Image = global::CTDL_project.Properties.Resources.iconfinder_close_3830967;
+            this.exit.ImageSize = 30;
+            this.exit.Location = new System.Drawing.Point(466, 17);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(44, 45);
+            this.exit.Size = new System.Drawing.Size(43, 39);
             this.exit.TabIndex = 8;
             this.exit.UseSelectable = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
@@ -49,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(518, 260);
             this.ControlBox = false;
             this.Controls.Add(this.exit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Default;
