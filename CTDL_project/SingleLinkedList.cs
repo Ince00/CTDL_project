@@ -9,11 +9,11 @@ namespace CTDL_project
 {
     internal class Node
     {
-        internal int data;
+        internal Control data;
         internal Node next;
 
         // Constructor to create a new node.Next is by default initialized as null
-        public Node(int d)
+        public Node(Control d)
         {
             data = d;
             next = null;

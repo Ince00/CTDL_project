@@ -1,6 +1,8 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
-
 namespace CTDL_project
 {
     //this class will depict Linked List implementation of Queue
@@ -15,7 +17,7 @@ namespace CTDL_project
         }
 
         // Method to add an element to the queue.
-        internal void Enqueue(int item)
+        internal void Enqueue(Control item)
         {
             Node newNode = new Node(item);
 
