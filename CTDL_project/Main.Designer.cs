@@ -226,9 +226,9 @@
             // 
             this.groupBox2.Controls.Add(this.cb_code);
             this.groupBox2.Controls.Add(this.txt_code);
-            this.groupBox2.Location = new System.Drawing.Point(595, 359);
+            this.groupBox2.Location = new System.Drawing.Point(553, 359);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(218, 172);
+            this.groupBox2.Size = new System.Drawing.Size(260, 172);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thể hiện code";
@@ -245,7 +245,7 @@
             this.cb_code.Location = new System.Drawing.Point(6, 19);
             this.cb_code.Name = "cb_code";
             this.cb_code.PromptText = "Lựa chọn thao tác";
-            this.cb_code.Size = new System.Drawing.Size(206, 25);
+            this.cb_code.Size = new System.Drawing.Size(248, 25);
             this.cb_code.TabIndex = 3;
             this.cb_code.UseSelectable = true;
             this.cb_code.SelectedIndexChanged += new System.EventHandler(this.cb_code_SelectedIndexChanged);
@@ -255,7 +255,7 @@
             this.txt_code.FormattingEnabled = true;
             this.txt_code.Location = new System.Drawing.Point(6, 54);
             this.txt_code.Name = "txt_code";
-            this.txt_code.Size = new System.Drawing.Size(206, 108);
+            this.txt_code.Size = new System.Drawing.Size(248, 108);
             this.txt_code.TabIndex = 2;
             // 
             // groupBox3
@@ -266,7 +266,7 @@
             this.groupBox3.Controls.Add(this.btn_showQueue);
             this.groupBox3.Location = new System.Drawing.Point(277, 359);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(157, 172);
+            this.groupBox3.Size = new System.Drawing.Size(144, 172);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bảng điều khiển";
@@ -327,9 +327,9 @@
             // 
             this.groupBox4.Controls.Add(this.metroScrollBar1);
             this.groupBox4.Controls.Add(this.btn_tamDung);
-            this.groupBox4.Location = new System.Drawing.Point(440, 359);
+            this.groupBox4.Location = new System.Drawing.Point(427, 359);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(149, 172);
+            this.groupBox4.Size = new System.Drawing.Size(120, 172);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bảng điều khiển";
@@ -337,7 +337,7 @@
             // metroScrollBar1
             // 
             this.metroScrollBar1.LargeChange = 10;
-            this.metroScrollBar1.Location = new System.Drawing.Point(116, 19);
+            this.metroScrollBar1.Location = new System.Drawing.Point(68, 23);
             this.metroScrollBar1.Maximum = 100;
             this.metroScrollBar1.Minimum = 0;
             this.metroScrollBar1.MouseWheelBarPartitions = 10;
