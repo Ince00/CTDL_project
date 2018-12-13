@@ -27,3 +27,6 @@ D:\CTDL_project\CTDL_project\obj\Debug\CTDL_project.csproj.CopyComplete
 D:\CTDL_project\CTDL_project\obj\Debug\CTDL_project.exe
 D:\CTDL_project\CTDL_project\obj\Debug\CTDL_project.pdb
 D:\CTDL_project\CTDL_project\obj\Debug\CTDL_project.About.resources
+D:\CTDL_project\CTDL_project\bin\Debug\vi-VN\CTDL_project.resources.dll
+D:\CTDL_project\CTDL_project\obj\Debug\CTDL_project.Main.vi-VN.resources
+D:\CTDL_project\CTDL_project\obj\Debug\vi-VN\CTDL_project.resources.dll

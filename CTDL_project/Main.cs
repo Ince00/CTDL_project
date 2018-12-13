@@ -16,7 +16,8 @@ namespace CTDL_project
         #region Khai báo
         LinkListQueue myQueue = new LinkListQueue();
         int x;
-        int khoangCach = 595;
+        int khoangCach = 600;
+        //int kcBienMat = 50;
         #endregion
 
         #region Queue
@@ -54,37 +55,30 @@ namespace CTDL_project
             this.txt_giaTri.SelectAll();
             try
             {
-                if (myQueue.front == null)
-                {
-                    x = 0;
-                }
-
                 TextBox node = new TextBox();
                 node.Text = txt_giaTri.Text;
                 node.TextAlign = HorizontalAlignment.Center;
                 node.Width = 40;
                 node.Height = 40;
-                node.Location = new Point(x, 75);
+                node.Location = new Point(0, 75);
                 node.BackColor = Color.Coral;
                 node.ForeColor = Color.White;
                 node.Font = new Font("Arial", 20, FontStyle.Bold);
                 node.ReadOnly = true;
                 this.Controls.Add(node);
 
+                myQueue.Enqueue(node);
+
                 Node_qua_phai(node, 50);
                 Node_di_xuong(node, 90);
-                Node_qua_trai(node, khoangCach);
-                khoangCach += 60;
-                myQueue.Enqueue(node);
-                x += 60;
-                
+                Node_qua_phai(node, khoangCach -= 60);
 
                 this.txt_giaTri.Clear();
                 this.txt_giaTri.Focus();
             }
             catch (Exception err)
             {
-                MetroFramework.MetroMessageBox.Show(this, err.ToString(), "Thông báo lỗi !",
+                MetroFramework.MetroMessageBox.Show(this, err.ToString(), "ERROR",
                          MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -194,14 +188,34 @@ namespace CTDL_project
         {
             try
             {
-                //myQueue.Dequeue();
-                this.Controls.Remove(myQueue.front.data);
-                myQueue.front.data.Dispose();
-                myQueue.Dequeue();
+                if (myQueue.front != null)
+                {
+                    int kcXoa = 60;
+                    Node_qua_phai(myQueue.front.data, 50);
+                    Node_di_xuong(myQueue.front.data, 90);
+                    Node_qua_phai(myQueue.front.data, 200);
+                    this.Controls.Remove(myQueue.front.data);
+                    myQueue.front.data.Dispose();
+                    myQueue.Dequeue();
+                    //while (myQueue.front.data != null)
+                    //{
+                    //    Node_qua_phai(myQueue.front.data, kcXoa);
+                    //    myQueue.front.data.Dispose();
+                    //    kcXoa += 60;
+                    //    myQueue.front = myQueue.front.next;
+                    //}
+                }
+                if (myQueue.front == null)
+                {
+                    khoangCach = 600;
+                    MetroFramework.MetroMessageBox.Show(this, "Hàng đợi rỗng !", "THÔNG BÁO",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
             catch (Exception err)
             {
-                MetroFramework.MetroMessageBox.Show(this, err.ToString(), "Thông báo lỗi !",
+                MetroFramework.MetroMessageBox.Show(this, err.ToString(), "ERROR",
                          MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -211,17 +225,33 @@ namespace CTDL_project
         {
             try
             {
-                while (myQueue.front != null)
+                Node temp = myQueue.front;
+                if (temp != null)
                 {
-                    this.Controls.Remove(myQueue.front.data);
-                    myQueue.front.data.Dispose();
-                    myQueue.front = myQueue.front.next;
+                    int kcBienMat = 50;
+                    while (temp != null)
+                    {
+                        Node_qua_phai(temp.data, kcBienMat);
+                        Node_di_xuong(temp.data, 90);
+                        Node_qua_phai(temp.data, 200);
+
+                        Controls.Remove(temp.data);
+                        temp.data.Dispose();
+                        kcBienMat += 60;
+                        temp = temp.next;
+                    }
+                    myQueue.ClearQueue();
                 }
-                myQueue.ClearQueue();
+                if (temp == null)
+                {
+                    khoangCach = 600;
+                }
+
+
             }
             catch (Exception err)
             {
-                MetroFramework.MetroMessageBox.Show(this, err.ToString(), "Thông báo lỗi !",
+                MetroFramework.MetroMessageBox.Show(this, err.ToString(), "ERROR",
                          MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -303,6 +333,11 @@ namespace CTDL_project
         }
 
         private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

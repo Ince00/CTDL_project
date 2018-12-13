@@ -16,6 +16,7 @@ namespace CTDL_project
         public About()
         {
             InitializeComponent();
+            
         }
 
         private void exit_Click(object sender, EventArgs e)
