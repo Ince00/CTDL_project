@@ -14,15 +14,15 @@ namespace CTDL_project
         {
             InitializeComponent();
         }
-        #region Khai báo
+        #region Khai báo biến
+
         LinkListQueue myQueue = new LinkListQueue();
         int khoangCach = 600;
-        int tocDo;
-        //int kcBienMat = 50;
+
         #endregion
 
         #region Các hàm tiện ích
-        
+
         public static int[] StringToIntArray(string input)
         {
             string[] fields = input.Split(new char[] { ' ', '\n', ';', ',' }, StringSplitOptions.RemoveEmptyEntries);
@@ -35,7 +35,60 @@ namespace CTDL_project
             }
             return x;
         }
+        
+        public void Node_di_xuong(Control t, int S)
+        {
+            Application.DoEvents();
+            this.Invoke((MethodInvoker)delegate
+            {
+                int loop_Count = S;
+                while (loop_Count > 0)
+                {
+                    Application.DoEvents();
+                    t.Top += 1;
+                    loop_Count--;
+                }
+                t.Refresh();
+            });
+        }
+
+        public void Node_qua_phai(Control t, int S)
+        {
+            Application.DoEvents();
+            this.Invoke((MethodInvoker)delegate
+            {
+                int loop_Count = S;
+                while (loop_Count > 0)
+                {
+                    Application.DoEvents();
+                    t.Left += 1;
+                    loop_Count--;
+                }
+                t.Refresh();
+            });
+        }
+
+        public void Node_qua_trai(Control t, int S)
+        {
+            Application.DoEvents();
+            this.Invoke((MethodInvoker)delegate
+            {
+                int loop_Count = S;
+                while (loop_Count > 0)
+                {
+                    Application.DoEvents();
+                    t.Left -= 1;
+                    loop_Count--;
+                }
+                t.Refresh();
+            });
+        }
+
+
+
         #endregion
+
+        #region Xử lí các sự kiện 
 
         private void exit_Click(object sender, EventArgs e)
         {
@@ -96,84 +149,26 @@ namespace CTDL_project
 
         private void btn_showQueue_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int item = Convert.ToInt32(txt_giaTri.Text);
-            //    myQueue.Enqueue(item);
-            //    tao_Node(item);
-            //    Node_qua_phai(Node, 40);
-            //    Node_di_xuong(Node, 90);
-            //    Node_qua_phai(Node, khoangCach);
-            //    khoangCach -= 60;
-            //    this.txt_giaTri.Clear();
-            //    this.txt_giaTri.Focus();
-            //}
-            //catch (Exception err)
-            //{
-            //    MetroFramework.MetroMessageBox.Show(this, err.ToString(), "Thông báo lỗi !",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //}
-            Node temp = myQueue.front;
-            while (temp != null)
+            try
             {
-                Node_qua_phai(temp.data, 50);
-                Node_di_xuong(temp.data, 90);
-                Node_qua_phai(temp.data, khoangCach -= 60);
+                Node temp = myQueue.front;
+                while (temp != null)
+                {
+                    Node_qua_phai(temp.data, 50);
+                    Node_di_xuong(temp.data, 90);
+                    Node_qua_phai(temp.data, khoangCach -= 60);
 
-             
-                temp = temp.next;
+                    temp = temp.next;
+                }
+            }
+            catch (Exception err)
+            {
+                MetroFramework.MetroMessageBox.Show(this, err.ToString(), "ERROR",
+                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
 
-        }
-
-        public void Node_di_xuong(Control t, int S)
-        {
-            Application.DoEvents();
-            this.Invoke((MethodInvoker)delegate
-            {
-                int loop_Count = S;
-                while (loop_Count > 0)
-                {
-                    Application.DoEvents();
-                    t.Top += 1;
-                    //Tre(Toc_do);
-                    loop_Count--;
-                }
-                t.Refresh();
-            });
-        }
-        public void Node_qua_phai(Control t, int S)
-        {
-            Application.DoEvents();
-            this.Invoke((MethodInvoker)delegate
-            {
-                int loop_Count = S;
-                while (loop_Count > 0)
-                {
-                    Application.DoEvents();
-                    t.Left += 1;
-                    //Tre(Toc_do);
-                    loop_Count--;
-                }
-                t.Refresh();
-            });
-        }
-        public void Node_qua_trai(Control t, int S)
-        {
-            Application.DoEvents();
-            this.Invoke((MethodInvoker)delegate
-            {
-                int loop_Count = S;
-                while (loop_Count > 0)
-                {
-                    Application.DoEvents();
-                    t.Left -= 1;
-                    //Tre(Toc_do);
-                    loop_Count--;
-                }
-                t.Refresh();
-            });
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -202,20 +197,13 @@ namespace CTDL_project
             {
                 if (myQueue.front != null)
                 {
-                    int kcXoa = 60;
+                    //int kcXoa = 60;
                     Node_qua_phai(myQueue.front.data, 50);
                     Node_di_xuong(myQueue.front.data, 90);
                     Node_qua_phai(myQueue.front.data, 200);
                     this.Controls.Remove(myQueue.front.data);
                     myQueue.front.data.Dispose();
                     myQueue.Dequeue();
-                    //while (myQueue.front.data != null)
-                    //{
-                    //    Node_qua_phai(myQueue.front.data, kcXoa);
-                    //    myQueue.front.data.Dispose();
-                    //    kcXoa += 60;
-                    //    myQueue.front = myQueue.front.next;
-                    //}
                 }
                 if (myQueue.front == null)
                 {
@@ -356,9 +344,20 @@ namespace CTDL_project
             }
         }
 
-        private void Trb_Toc_do_Scroll(object sender, EventArgs e)
+        private void txt_giaTri_KeyPress(object sender, KeyPressEventArgs e)
         {
-            lb_tocDo.Text = Trb_Toc_do.Value.ToString();
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Chỉ nhập số !", "Cảnh báo",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+            txt_giaTri.Clear();
+            txt_giaTri.Focus();
         }
+
+        #endregion
     }
 }
+
+

@@ -32,8 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pa_nhapTay = new MetroFramework.Controls.MetroPanel();
+            this.btn_enQueue = new MetroFramework.Controls.MetroLink();
             this.txt_giaTri = new MetroFramework.Controls.MetroTextBox();
             this.pa_openFile = new MetroFramework.Controls.MetroPanel();
+            this.btn_openFile = new MetroFramework.Controls.MetroLink();
             this.txt_openFile = new MetroFramework.Controls.MetroTextBox();
             this.pa_tuyChon = new MetroFramework.Controls.MetroPanel();
             this.cb_tuyChon = new MetroFramework.Controls.MetroComboBox();
@@ -41,28 +43,19 @@
             this.cb_code = new MetroFramework.Controls.MetroComboBox();
             this.txt_code = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lb_tocDo = new System.Windows.Forms.Label();
-            this.Trb_Toc_do = new System.Windows.Forms.TrackBar();
-            this.btn_tiepTuc = new MetroFramework.Controls.MetroLink();
-            this.btn_tamDung = new MetroFramework.Controls.MetroLink();
             this.btn_about = new MetroFramework.Controls.MetroLink();
             this.btn_clear = new MetroFramework.Controls.MetroLink();
             this.btn_deQueue = new MetroFramework.Controls.MetroLink();
             this.btn_showQueue = new MetroFramework.Controls.MetroLink();
-            this.btn_enQueue = new MetroFramework.Controls.MetroLink();
-            this.btn_openFile = new MetroFramework.Controls.MetroLink();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.exit = new MetroFramework.Controls.MetroLink();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.pa_nhapTay.SuspendLayout();
             this.pa_openFile.SuspendLayout();
             this.pa_tuyChon.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Trb_Toc_do)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,6 +79,16 @@
             this.pa_nhapTay.VerticalScrollbarBarColor = true;
             this.pa_nhapTay.VerticalScrollbarHighlightOnWheel = false;
             this.pa_nhapTay.VerticalScrollbarSize = 10;
+            // 
+            // btn_enQueue
+            // 
+            this.btn_enQueue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_settings_3830984;
+            this.btn_enQueue.ImageSize = 35;
+            resources.ApplyResources(this.btn_enQueue, "btn_enQueue");
+            this.btn_enQueue.Name = "btn_enQueue";
+            this.btn_enQueue.UseSelectable = true;
+            this.btn_enQueue.Click += new System.EventHandler(this.btn_enQueue_Click);
             // 
             // txt_giaTri
             // 
@@ -118,6 +121,7 @@
             this.txt_giaTri.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_giaTri.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_giaTri.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_giaTri_KeyDown);
+            this.txt_giaTri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_giaTri_KeyPress);
             // 
             // pa_openFile
             // 
@@ -131,6 +135,15 @@
             this.pa_openFile.VerticalScrollbarBarColor = true;
             this.pa_openFile.VerticalScrollbarHighlightOnWheel = false;
             this.pa_openFile.VerticalScrollbarSize = 10;
+            // 
+            // btn_openFile
+            // 
+            this.btn_openFile.Image = global::CTDL_project.Properties.Resources.iconfinder_folders_3830989;
+            this.btn_openFile.ImageSize = 35;
+            resources.ApplyResources(this.btn_openFile, "btn_openFile");
+            this.btn_openFile.Name = "btn_openFile";
+            this.btn_openFile.UseSelectable = true;
+            this.btn_openFile.Click += new System.EventHandler(this.btn_openFile_Click);
             // 
             // txt_openFile
             // 
@@ -227,54 +240,6 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btn_tiepTuc);
-            this.groupBox4.Controls.Add(this.Trb_Toc_do);
-            this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.lb_tocDo);
-            this.groupBox4.Controls.Add(this.btn_tamDung);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // lb_tocDo
-            // 
-            resources.ApplyResources(this.lb_tocDo, "lb_tocDo");
-            this.lb_tocDo.Name = "lb_tocDo";
-            // 
-            // Trb_Toc_do
-            // 
-            resources.ApplyResources(this.Trb_Toc_do, "Trb_Toc_do");
-            this.Trb_Toc_do.Name = "Trb_Toc_do";
-            this.Trb_Toc_do.TickFrequency = 2;
-            this.Trb_Toc_do.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.Trb_Toc_do.Value = 5;
-            this.Trb_Toc_do.Scroll += new System.EventHandler(this.Trb_Toc_do_Scroll);
-            // 
-            // btn_tiepTuc
-            // 
-            this.btn_tiepTuc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_tiepTuc.Image = global::CTDL_project.Properties.Resources.iconfinder_001___play_2949893;
-            this.btn_tiepTuc.ImageSize = 40;
-            resources.ApplyResources(this.btn_tiepTuc, "btn_tiepTuc");
-            this.btn_tiepTuc.Name = "btn_tiepTuc";
-            this.btn_tiepTuc.UseSelectable = true;
-            // 
-            // btn_tamDung
-            // 
-            this.btn_tamDung.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_tamDung.Image = global::CTDL_project.Properties.Resources.iconfinder_004___Pause_2949910;
-            this.btn_tamDung.ImageSize = 40;
-            resources.ApplyResources(this.btn_tamDung, "btn_tamDung");
-            this.btn_tamDung.Name = "btn_tamDung";
-            this.btn_tamDung.UseSelectable = true;
-            // 
             // btn_about
             // 
             this.btn_about.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -315,25 +280,6 @@
             this.btn_showQueue.UseSelectable = true;
             this.btn_showQueue.Click += new System.EventHandler(this.btn_showQueue_Click);
             // 
-            // btn_enQueue
-            // 
-            this.btn_enQueue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_enQueue.Image = global::CTDL_project.Properties.Resources.iconfinder_settings_3830984;
-            this.btn_enQueue.ImageSize = 35;
-            resources.ApplyResources(this.btn_enQueue, "btn_enQueue");
-            this.btn_enQueue.Name = "btn_enQueue";
-            this.btn_enQueue.UseSelectable = true;
-            this.btn_enQueue.Click += new System.EventHandler(this.btn_enQueue_Click);
-            // 
-            // btn_openFile
-            // 
-            this.btn_openFile.Image = global::CTDL_project.Properties.Resources.iconfinder_folders_3830989;
-            this.btn_openFile.ImageSize = 35;
-            resources.ApplyResources(this.btn_openFile, "btn_openFile");
-            this.btn_openFile.Name = "btn_openFile";
-            this.btn_openFile.UseSelectable = true;
-            this.btn_openFile.Click += new System.EventHandler(this.btn_openFile_Click);
-            // 
             // exit
             // 
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -343,6 +289,12 @@
             this.exit.Name = "exit";
             this.exit.UseSelectable = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // groupBox4
+            // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
             // 
             // Main
             // 
@@ -365,9 +317,6 @@
             this.pa_tuyChon.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Trb_Toc_do)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,11 +343,6 @@
         private MetroFramework.Controls.MetroComboBox cb_code;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private MetroFramework.Controls.MetroLink btn_tamDung;
-        private System.Windows.Forms.Label lb_tocDo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TrackBar Trb_Toc_do;
-        private MetroFramework.Controls.MetroLink btn_tiepTuc;
     }
 }
 

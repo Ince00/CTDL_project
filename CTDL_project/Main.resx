@@ -117,66 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;pa_nhapTay.Name" xml:space="preserve">
-    <value>pa_nhapTay</value>
-  </data>
-  <data name="&gt;&gt;pa_nhapTay.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;pa_nhapTay.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pa_nhapTay.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.Name" xml:space="preserve">
-    <value>pa_openFile</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pa_tuyChon.Name" xml:space="preserve">
-    <value>pa_tuyChon</value>
-  </data>
-  <data name="&gt;&gt;pa_tuyChon.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;pa_tuyChon.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pa_tuyChon.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 359</value>
+  <data name="btn_enQueue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 5</value>
   </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 172</value>
+  <data name="btn_enQueue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 41</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Tuỳ chọn</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+  <data name="btn_enQueue.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="&gt;&gt;btn_enQueue.Name" xml:space="preserve">
@@ -190,39 +139,6 @@
   </data>
   <data name="&gt;&gt;btn_enQueue.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;txt_giaTri.Name" xml:space="preserve">
-    <value>txt_giaTri</value>
-  </data>
-  <data name="&gt;&gt;txt_giaTri.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;txt_giaTri.Parent" xml:space="preserve">
-    <value>pa_nhapTay</value>
-  </data>
-  <data name="&gt;&gt;txt_giaTri.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pa_nhapTay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 63</value>
-  </data>
-  <data name="pa_nhapTay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 49</value>
-  </data>
-  <data name="pa_nhapTay.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pa_nhapTay.Name" xml:space="preserve">
-    <value>pa_nhapTay</value>
-  </data>
-  <data name="&gt;&gt;pa_nhapTay.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;pa_nhapTay.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pa_nhapTay.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="resource.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -264,6 +180,36 @@
   <data name="&gt;&gt;txt_giaTri.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="pa_nhapTay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 63</value>
+  </data>
+  <data name="pa_nhapTay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 49</value>
+  </data>
+  <data name="pa_nhapTay.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pa_nhapTay.Name" xml:space="preserve">
+    <value>pa_nhapTay</value>
+  </data>
+  <data name="&gt;&gt;pa_nhapTay.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;pa_nhapTay.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;pa_nhapTay.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_openFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 5</value>
+  </data>
+  <data name="btn_openFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 36</value>
+  </data>
+  <data name="btn_openFile.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <data name="&gt;&gt;btn_openFile.Name" xml:space="preserve">
     <value>btn_openFile</value>
   </data>
@@ -275,39 +221,6 @@
   </data>
   <data name="&gt;&gt;btn_openFile.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;txt_openFile.Name" xml:space="preserve">
-    <value>txt_openFile</value>
-  </data>
-  <data name="&gt;&gt;txt_openFile.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;txt_openFile.Parent" xml:space="preserve">
-    <value>pa_openFile</value>
-  </data>
-  <data name="&gt;&gt;txt_openFile.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pa_openFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 118</value>
-  </data>
-  <data name="pa_openFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 44</value>
-  </data>
-  <data name="pa_openFile.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.Name" xml:space="preserve">
-    <value>pa_openFile</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pa_openFile.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="resource.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -348,6 +261,45 @@
   <data name="&gt;&gt;txt_openFile.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="pa_openFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 118</value>
+  </data>
+  <data name="pa_openFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 44</value>
+  </data>
+  <data name="pa_openFile.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pa_openFile.Name" xml:space="preserve">
+    <value>pa_openFile</value>
+  </data>
+  <data name="&gt;&gt;pa_openFile.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;pa_openFile.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;pa_openFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cb_tuyChon.ItemHeight" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cb_tuyChon.Items" xml:space="preserve">
+    <value>Nhập từng giá trị</value>
+  </data>
+  <data name="cb_tuyChon.Items1" xml:space="preserve">
+    <value>Đọc giá trị từ File</value>
+  </data>
+  <data name="cb_tuyChon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="cb_tuyChon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 25</value>
+  </data>
+  <data name="cb_tuyChon.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;cb_tuyChon.Name" xml:space="preserve">
     <value>cb_tuyChon</value>
   </data>
@@ -381,83 +333,29 @@
   <data name="&gt;&gt;pa_tuyChon.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="cb_tuyChon.ItemHeight" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 359</value>
   </data>
-  <data name="cb_tuyChon.Items" xml:space="preserve">
-    <value>Nhập từng giá trị</value>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 172</value>
   </data>
-  <data name="cb_tuyChon.Items1" xml:space="preserve">
-    <value>Đọc giá trị từ File</value>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="cb_tuyChon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Tuỳ chọn</value>
   </data>
-  <data name="cb_tuyChon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 25</value>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="cb_tuyChon.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cb_tuyChon.Name" xml:space="preserve">
-    <value>cb_tuyChon</value>
-  </data>
-  <data name="&gt;&gt;cb_tuyChon.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroComboBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;cb_tuyChon.Parent" xml:space="preserve">
-    <value>pa_tuyChon</value>
-  </data>
-  <data name="&gt;&gt;cb_tuyChon.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cb_code.Name" xml:space="preserve">
-    <value>cb_code</value>
-  </data>
-  <data name="&gt;&gt;cb_code.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroComboBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;cb_code.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cb_code.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txt_code.Name" xml:space="preserve">
-    <value>txt_code</value>
-  </data>
-  <data name="&gt;&gt;txt_code.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_code.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txt_code.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>554, 359</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 172</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Thể hiện code</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="cb_code.ItemHeight" type="System.Int32, mscorlib">
     <value>19</value>
@@ -510,233 +408,29 @@
   <data name="&gt;&gt;txt_code.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;btn_about.Name" xml:space="preserve">
-    <value>btn_about</value>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 359</value>
   </data>
-  <data name="&gt;&gt;btn_about.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 172</value>
   </data>
-  <data name="&gt;&gt;btn_about.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;btn_about.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_clear.Name" xml:space="preserve">
-    <value>btn_clear</value>
-  </data>
-  <data name="&gt;&gt;btn_clear.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_clear.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;btn_clear.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_deQueue.Name" xml:space="preserve">
-    <value>btn_deQueue</value>
-  </data>
-  <data name="&gt;&gt;btn_deQueue.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_deQueue.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;btn_deQueue.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btn_showQueue.Name" xml:space="preserve">
-    <value>btn_showQueue</value>
-  </data>
-  <data name="&gt;&gt;btn_showQueue.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_showQueue.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;btn_showQueue.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 359</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 172</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Bảng điều khiển</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="btn_tiepTuc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 85</value>
-  </data>
-  <data name="btn_tiepTuc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 47</value>
-  </data>
-  <data name="btn_tiepTuc.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;btn_tiepTuc.Name" xml:space="preserve">
-    <value>btn_tiepTuc</value>
-  </data>
-  <data name="&gt;&gt;btn_tiepTuc.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_tiepTuc.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;btn_tiepTuc.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Trb_Toc_do.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Trb_Toc_do.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 31</value>
-  </data>
-  <data name="Trb_Toc_do.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="Trb_Toc_do.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 131</value>
-  </data>
-  <data name="Trb_Toc_do.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;Trb_Toc_do.Name" xml:space="preserve">
-    <value>Trb_Toc_do</value>
-  </data>
-  <data name="&gt;&gt;Trb_Toc_do.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Trb_Toc_do.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Trb_Toc_do.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 141</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Tốc độ:</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lb_tocDo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lb_tocDo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lb_tocDo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 141</value>
-  </data>
-  <data name="lb_tocDo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
-  </data>
-  <data name="lb_tocDo.TabIndex" type="System.Int32, mscorlib">
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="lb_tocDo.Text" xml:space="preserve">
-    <value>5</value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Thể hiện code</value>
   </data>
-  <data name="&gt;&gt;lb_tocDo.Name" xml:space="preserve">
-    <value>lb_tocDo</value>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;lb_tocDo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lb_tocDo.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;lb_tocDo.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btn_tamDung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 25</value>
-  </data>
-  <data name="btn_tamDung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 54</value>
-  </data>
-  <data name="btn_tamDung.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;btn_tamDung.Name" xml:space="preserve">
-    <value>btn_tamDung</value>
-  </data>
-  <data name="&gt;&gt;btn_tamDung.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_tamDung.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;btn_tamDung.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 359</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 172</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Bảng điều khiển</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="btn_about.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 91</value>
@@ -760,7 +454,7 @@
     <value>0</value>
   </data>
   <data name="btn_clear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 94</value>
+    <value>6, 91</value>
   </data>
   <data name="btn_clear.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 63</value>
@@ -822,48 +516,33 @@
   <data name="&gt;&gt;btn_showQueue.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="btn_enQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 5</value>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 359</value>
   </data>
-  <data name="btn_enQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 41</value>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 172</value>
   </data>
-  <data name="btn_enQueue.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;btn_enQueue.Name" xml:space="preserve">
-    <value>btn_enQueue</value>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Bảng điều khiển</value>
   </data>
-  <data name="&gt;&gt;btn_enQueue.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
-  <data name="&gt;&gt;btn_enQueue.Parent" xml:space="preserve">
-    <value>pa_nhapTay</value>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btn_enQueue.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="btn_openFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 5</value>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="btn_openFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 36</value>
-  </data>
-  <data name="btn_openFile.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btn_openFile.Name" xml:space="preserve">
-    <value>btn_openFile</value>
-  </data>
-  <data name="&gt;&gt;btn_openFile.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_openFile.Parent" xml:space="preserve">
-    <value>pa_openFile</value>
-  </data>
-  <data name="&gt;&gt;btn_openFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="exit.Location" type="System.Drawing.Point, System.Drawing">
     <value>790, 15</value>
   </data>
@@ -884,6 +563,30 @@
   </data>
   <data name="&gt;&gt;exit.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 359</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 172</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -7065,9 +6768,6 @@
         +AAAD//////4AAAf//////wAAD///////gAAf///////AAD////////AA/////////gP////////////
         //////////////////////////////////////////////////////////////////8=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cấu trúc dữ liệu hàng đợi</value>
