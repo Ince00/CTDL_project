@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace CTDL_project
@@ -15,12 +16,13 @@ namespace CTDL_project
         }
         #region Khai báo
         LinkListQueue myQueue = new LinkListQueue();
-        int x;
         int khoangCach = 600;
+        int tocDo;
         //int kcBienMat = 50;
         #endregion
 
-        #region Queue
+        #region Các hàm tiện ích
+        
         public static int[] StringToIntArray(string input)
         {
             string[] fields = input.Split(new char[] { ' ', '\n', ';', ',' }, StringSplitOptions.RemoveEmptyEntries);
@@ -332,14 +334,9 @@ namespace CTDL_project
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Trb_Toc_do_Scroll(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            lb_tocDo.Text = Trb_Toc_do.Value.ToString();
         }
     }
 }
