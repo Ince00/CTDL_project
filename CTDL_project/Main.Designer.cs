@@ -50,12 +50,24 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.exit = new MetroFramework.Controls.MetroLink();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lb_conTrong = new MetroFramework.Controls.MetroLabel();
+            this.lb_hienTai = new MetroFramework.Controls.MetroLabel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.pa_bangDieuKhien = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.pa_nhapTay.SuspendLayout();
             this.pa_openFile.SuspendLayout();
             this.pa_tuyChon.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.pa_bangDieuKhien.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -87,6 +99,7 @@
             this.btn_enQueue.ImageSize = 35;
             resources.ApplyResources(this.btn_enQueue, "btn_enQueue");
             this.btn_enQueue.Name = "btn_enQueue";
+            this.metroToolTip1.SetToolTip(this.btn_enQueue, resources.GetString("btn_enQueue.ToolTip"));
             this.btn_enQueue.UseSelectable = true;
             this.btn_enQueue.Click += new System.EventHandler(this.btn_enQueue_Click);
             // 
@@ -104,7 +117,6 @@
             this.txt_giaTri.CustomButton.TabIndex = ((int)(resources.GetObject("resource.TabIndex")));
             this.txt_giaTri.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_giaTri.CustomButton.UseSelectable = true;
-            this.txt_giaTri.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible")));
             this.txt_giaTri.Lines = new string[0];
             resources.ApplyResources(this.txt_giaTri, "txt_giaTri");
             this.txt_giaTri.MaxLength = 32767;
@@ -116,6 +128,8 @@
             this.txt_giaTri.SelectionLength = 0;
             this.txt_giaTri.SelectionStart = 0;
             this.txt_giaTri.ShortcutsEnabled = true;
+            this.txt_giaTri.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.SetToolTip(this.txt_giaTri, resources.GetString("txt_giaTri.ToolTip"));
             this.txt_giaTri.UseSelectable = true;
             this.txt_giaTri.WaterMark = "Nhập giá trị . . .";
             this.txt_giaTri.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -142,6 +156,7 @@
             this.btn_openFile.ImageSize = 35;
             resources.ApplyResources(this.btn_openFile, "btn_openFile");
             this.btn_openFile.Name = "btn_openFile";
+            this.metroToolTip1.SetToolTip(this.btn_openFile, resources.GetString("btn_openFile.ToolTip"));
             this.btn_openFile.UseSelectable = true;
             this.btn_openFile.Click += new System.EventHandler(this.btn_openFile_Click);
             // 
@@ -159,7 +174,7 @@
             this.txt_openFile.CustomButton.TabIndex = ((int)(resources.GetObject("resource.TabIndex1")));
             this.txt_openFile.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_openFile.CustomButton.UseSelectable = true;
-            this.txt_openFile.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible1")));
+            this.txt_openFile.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible")));
             this.txt_openFile.Lines = new string[0];
             resources.ApplyResources(this.txt_openFile, "txt_openFile");
             this.txt_openFile.MaxLength = 32767;
@@ -171,6 +186,7 @@
             this.txt_openFile.SelectionLength = 0;
             this.txt_openFile.SelectionStart = 0;
             this.txt_openFile.ShortcutsEnabled = true;
+            this.metroToolTip1.SetToolTip(this.txt_openFile, resources.GetString("txt_openFile.ToolTip"));
             this.txt_openFile.UseSelectable = true;
             this.txt_openFile.WaterMark = "Nhập đường dẫn . . .";
             this.txt_openFile.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -232,10 +248,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btn_about);
-            this.groupBox3.Controls.Add(this.btn_clear);
-            this.groupBox3.Controls.Add(this.btn_deQueue);
-            this.groupBox3.Controls.Add(this.btn_showQueue);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
@@ -247,6 +259,7 @@
             this.btn_about.ImageSize = 40;
             resources.ApplyResources(this.btn_about, "btn_about");
             this.btn_about.Name = "btn_about";
+            this.metroToolTip1.SetToolTip(this.btn_about, resources.GetString("btn_about.ToolTip"));
             this.btn_about.UseSelectable = true;
             this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
@@ -257,6 +270,7 @@
             this.btn_clear.ImageSize = 40;
             resources.ApplyResources(this.btn_clear, "btn_clear");
             this.btn_clear.Name = "btn_clear";
+            this.metroToolTip1.SetToolTip(this.btn_clear, resources.GetString("btn_clear.ToolTip"));
             this.btn_clear.UseSelectable = true;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
@@ -267,6 +281,7 @@
             this.btn_deQueue.ImageSize = 40;
             resources.ApplyResources(this.btn_deQueue, "btn_deQueue");
             this.btn_deQueue.Name = "btn_deQueue";
+            this.metroToolTip1.SetToolTip(this.btn_deQueue, resources.GetString("btn_deQueue.ToolTip"));
             this.btn_deQueue.UseSelectable = true;
             this.btn_deQueue.Click += new System.EventHandler(this.btn_deQueue_Click);
             // 
@@ -277,6 +292,7 @@
             this.btn_showQueue.ImageSize = 40;
             resources.ApplyResources(this.btn_showQueue, "btn_showQueue");
             this.btn_showQueue.Name = "btn_showQueue";
+            this.metroToolTip1.SetToolTip(this.btn_showQueue, resources.GetString("btn_showQueue.ToolTip"));
             this.btn_showQueue.UseSelectable = true;
             this.btn_showQueue.Click += new System.EventHandler(this.btn_showQueue_Click);
             // 
@@ -292,20 +308,95 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.metroProgressBar1);
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
+            // 
+            // metroProgressBar1
+            // 
+            resources.ApplyResources(this.metroProgressBar1, "metroProgressBar1");
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroToolTip1.SetToolTip(this.metroProgressBar1, resources.GetString("metroProgressBar1.ToolTip"));
+            // 
+            // metroLabel1
+            // 
+            resources.ApplyResources(this.metroLabel1, "metroLabel1");
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.ForeColor = System.Drawing.Color.Aqua;
+            this.metroLabel1.Name = "metroLabel1";
+            // 
+            // metroLabel2
+            // 
+            resources.ApplyResources(this.metroLabel2, "metroLabel2");
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Name = "metroLabel2";
+            // 
+            // metroLabel3
+            // 
+            resources.ApplyResources(this.metroLabel3, "metroLabel3");
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.metroLabel3.Name = "metroLabel3";
+            // 
+            // metroLabel4
+            // 
+            resources.ApplyResources(this.metroLabel4, "metroLabel4");
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.Name = "metroLabel4";
+            // 
+            // lb_conTrong
+            // 
+            resources.ApplyResources(this.lb_conTrong, "lb_conTrong");
+            this.lb_conTrong.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_conTrong.Name = "lb_conTrong";
+            // 
+            // lb_hienTai
+            // 
+            resources.ApplyResources(this.lb_hienTai, "lb_hienTai");
+            this.lb_hienTai.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_hienTai.Name = "lb_hienTai";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.metroLabel3);
+            this.groupBox6.Controls.Add(this.metroLabel1);
+            this.groupBox6.Controls.Add(this.lb_hienTai);
+            this.groupBox6.Controls.Add(this.metroLabel4);
+            this.groupBox6.Controls.Add(this.metroLabel2);
+            this.groupBox6.Controls.Add(this.lb_conTrong);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // pa_bangDieuKhien
+            // 
+            this.pa_bangDieuKhien.Controls.Add(this.btn_about);
+            this.pa_bangDieuKhien.Controls.Add(this.btn_clear);
+            this.pa_bangDieuKhien.Controls.Add(this.btn_showQueue);
+            this.pa_bangDieuKhien.Controls.Add(this.btn_deQueue);
+            resources.ApplyResources(this.pa_bangDieuKhien, "pa_bangDieuKhien");
+            this.pa_bangDieuKhien.Name = "pa_bangDieuKhien";
             // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
+            this.Controls.Add(this.pa_bangDieuKhien);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.exit);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Name = "Main";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Default;
@@ -316,7 +407,10 @@
             this.pa_openFile.ResumeLayout(false);
             this.pa_tuyChon.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.pa_bangDieuKhien.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -343,6 +437,16 @@
         private MetroFramework.Controls.MetroComboBox cb_code;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox groupBox4;
+        private MetroFramework.Controls.MetroLabel lb_hienTai;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel lb_conTrong;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
+        private System.Windows.Forms.Panel pa_bangDieuKhien;
     }
 }
 
