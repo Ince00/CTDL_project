@@ -114,6 +114,16 @@ namespace CTDL_project
             //        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //}
+            Node temp = myQueue.front;
+            while (temp != null)
+            {
+                Node_qua_phai(temp.data, 50);
+                Node_di_xuong(temp.data, 90);
+                Node_qua_phai(temp.data, khoangCach -= 60);
+
+             
+                temp = temp.next;
+            }
 
         }
 
@@ -319,7 +329,19 @@ namespace CTDL_project
                     int[] input = StringToIntArray(File.ReadAllText(txt_openFile.Text).Trim());
                     for (int i = 0; i < input.Length; i++)
                     {
-                        // myQueue.Enqueue(input[i]);
+                        TextBox node = new TextBox();
+                        node.Text = input[i].ToString();
+                        node.TextAlign = HorizontalAlignment.Center;
+                        node.Width = 40;
+                        node.Height = 40;
+                        node.Location = new Point(0, 75);
+                        node.BackColor = Color.Coral;
+                        node.ForeColor = Color.White;
+                        node.Font = new Font("Arial", 20, FontStyle.Bold);
+                        node.ReadOnly = true;
+                        this.Controls.Add(node);
+
+                        myQueue.Enqueue(node);
                     }
                     //tao_Node();
                     MetroFramework.MetroMessageBox.Show(this, "Đọc file thành công !", "Thông báo",
