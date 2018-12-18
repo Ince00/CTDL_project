@@ -49,8 +49,6 @@
             this.btn_showQueue = new MetroFramework.Controls.MetroLink();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.exit = new MetroFramework.Controls.MetroLink();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -65,7 +63,6 @@
             this.pa_openFile.SuspendLayout();
             this.pa_tuyChon.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.pa_bangDieuKhien.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +114,7 @@
             this.txt_giaTri.CustomButton.TabIndex = ((int)(resources.GetObject("resource.TabIndex")));
             this.txt_giaTri.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_giaTri.CustomButton.UseSelectable = true;
+            this.txt_giaTri.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible")));
             this.txt_giaTri.Lines = new string[0];
             resources.ApplyResources(this.txt_giaTri, "txt_giaTri");
             this.txt_giaTri.MaxLength = 32767;
@@ -174,7 +172,7 @@
             this.txt_openFile.CustomButton.TabIndex = ((int)(resources.GetObject("resource.TabIndex1")));
             this.txt_openFile.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_openFile.CustomButton.UseSelectable = true;
-            this.txt_openFile.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible")));
+            this.txt_openFile.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible1")));
             this.txt_openFile.Lines = new string[0];
             resources.ApplyResources(this.txt_openFile, "txt_openFile");
             this.txt_openFile.MaxLength = 32767;
@@ -306,19 +304,6 @@
             this.exit.UseSelectable = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.metroProgressBar1);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // metroProgressBar1
-            // 
-            resources.ApplyResources(this.metroProgressBar1, "metroProgressBar1");
-            this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroToolTip1.SetToolTip(this.metroProgressBar1, resources.GetString("metroProgressBar1.ToolTip"));
-            // 
             // metroLabel1
             // 
             resources.ApplyResources(this.metroLabel1, "metroLabel1");
@@ -391,7 +376,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.pa_bangDieuKhien);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -407,7 +391,6 @@
             this.pa_openFile.ResumeLayout(false);
             this.pa_tuyChon.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.pa_bangDieuKhien.ResumeLayout(false);
@@ -436,14 +419,12 @@
         private MetroFramework.Controls.MetroLink btn_enQueue;
         private MetroFramework.Controls.MetroComboBox cb_code;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.GroupBox groupBox4;
         private MetroFramework.Controls.MetroLabel lb_hienTai;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel lb_conTrong;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
         private System.Windows.Forms.GroupBox groupBox6;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
         private System.Windows.Forms.Panel pa_bangDieuKhien;
