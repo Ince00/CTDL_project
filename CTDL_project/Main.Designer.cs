@@ -117,7 +117,7 @@
             this.txt_giaTri.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible")));
             this.txt_giaTri.Lines = new string[0];
             resources.ApplyResources(this.txt_giaTri, "txt_giaTri");
-            this.txt_giaTri.MaxLength = 32767;
+            this.txt_giaTri.MaxLength = 2;
             this.txt_giaTri.Name = "txt_giaTri";
             this.txt_giaTri.PasswordChar = '\0';
             this.txt_giaTri.PromptText = "Nhập giá trị . . .";
@@ -213,6 +213,7 @@
             resources.GetString("cb_tuyChon.Items1")});
             this.cb_tuyChon.Name = "cb_tuyChon";
             this.cb_tuyChon.PromptText = "Phương thức nhập";
+            this.metroToolTip1.SetToolTip(this.cb_tuyChon, resources.GetString("cb_tuyChon.ToolTip"));
             this.cb_tuyChon.UseSelectable = true;
             this.cb_tuyChon.SelectedIndexChanged += new System.EventHandler(this.cb_tuyChon_SelectedIndexChanged);
             // 
@@ -301,6 +302,7 @@
             this.exit.ImageSize = 36;
             resources.ApplyResources(this.exit, "exit");
             this.exit.Name = "exit";
+            this.metroToolTip1.SetToolTip(this.exit, resources.GetString("exit.ToolTip"));
             this.exit.UseSelectable = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 

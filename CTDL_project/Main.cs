@@ -13,6 +13,9 @@ namespace CTDL_project
         {
             InitializeComponent();
         }
+
+
+
         #region Khai báo biến
 
         LinkListQueue myQueue = new LinkListQueue();
@@ -120,13 +123,13 @@ namespace CTDL_project
                 node.Width = 40;
                 node.Height = 40;
                 node.Location = new Point(0, 75);
-                node.BackColor = Color.Coral;
+                node.BackColor = Color.CornflowerBlue;
                 node.ForeColor = Color.White;
                 node.Font = new Font("Arial", 20, FontStyle.Bold);
                 node.ReadOnly = true;
                 this.Controls.Add(node);
 
-                if (myQueue.lenghtQueue()==0)
+                if (myQueue.lenghtQueue() == 0)
                 {
                     khoangCach = 600;
                 }
@@ -392,7 +395,7 @@ namespace CTDL_project
                             node.Width = 40;
                             node.Height = 40;
                             node.Location = new Point(-40, 75);
-                            node.BackColor = Color.Coral;
+                            node.BackColor = Color.Black;
                             node.ForeColor = Color.White;
                             node.Font = new Font("Arial", 20, FontStyle.Bold);
                             node.ReadOnly = true;
@@ -422,17 +425,17 @@ namespace CTDL_project
 
         private void txt_giaTri_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            if (char.IsLetter(e.KeyChar))
             {
-                MetroFramework.MetroMessageBox.Show(this, "Chỉ nhập số !", "Cảnh báo",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Handled = true;
+                MetroFramework.MetroMessageBox.Show(this, "Chỉ nhập số !", "ERROR",
+                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            txt_giaTri.Clear();
-            txt_giaTri.Focus();
         }
 
         #endregion
+
+
     }
 }
 

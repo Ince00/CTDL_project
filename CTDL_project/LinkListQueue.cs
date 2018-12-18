@@ -32,7 +32,6 @@ namespace CTDL_project
                 this.rear.next = newNode;
                 this.rear = newNode;
             }
-            Console.WriteLine("{0} inserted into Queue", item);
         }
 
         // Method to remove an element from queue.
@@ -41,7 +40,6 @@ namespace CTDL_project
             // If queue is empty, return NULL.
             if (this.front == null)
             {
-                Console.WriteLine("The Queue is empty");
                 return;
             }
 
@@ -54,8 +52,6 @@ namespace CTDL_project
             {
                 this.rear = null;
             }
-
-            Console.WriteLine("Item deleted is {0}", temp.data);
         }
 
         // Method to clear queue
@@ -63,7 +59,6 @@ namespace CTDL_project
         {
             if (this.front == null)
             {
-                Console.WriteLine("The Queue is empty");
                 return;
             }
 
@@ -94,7 +89,6 @@ namespace CTDL_project
         {
             if (this.front == null)
             {
-                Console.WriteLine("The Queue is empty");
                 return;
             }
 
